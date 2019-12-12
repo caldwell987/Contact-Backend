@@ -6,6 +6,5 @@ class Api::V1::UsersController < ApplicationController
     # render json: @users, status: 200
     render json: @users, include: [:contacts]
   end
-
 end
 
