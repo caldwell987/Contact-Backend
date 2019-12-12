@@ -1,0 +1,35 @@
+
+      <body>
+
+      <div id="id01" class="modal">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1">
+                <div align="center" >
+
+                <%= form_with url:'/login', method: 'post' do |f| %>
+                <%= f.label :username %>
+                <br>
+                <%= f.text_field :username %>
+                <br>
+                <%= f.label :password %>
+                <br>
+                <%= f.password_field :password %>
+                <br><br>
+                <%= f.submit "Login NOW"%>
+    
+                <% end %>
+
+                </div>
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          </div>
+        </div>
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Contacts</title>
+</head>
+
+<body>
+    <br><br>
+    <h1><%= @selectuser.firstname %> <%= @selectuser.lastname %></h1> 
+    <p><%= link_to "Add Friend", friendships_path(:friend_id => @user), :method => :post %></p>
+    <br><br>
+    <h2>Contacts:</h2>
+        <h5> 
+        <div id="contactdetails">   
+        <% @selectuser.contacts.each do |i| %>
+            <li>
+            <%= i.kind %>:
+            <%= i.value %>
+            </li>
+            <% end %>
+            <br>
+            <a class="bbb" href="http://qr.w69b.com/g/oqFzqOpnq/download">Import contact as VCard</a>
+            </div>
+        </h5>
+
+<br><br><br><br><br><br>
+
+
+</body>
+</html>
