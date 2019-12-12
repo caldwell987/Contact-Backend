@@ -7,5 +7,10 @@ test:
 production:
   adapter: redis
   database: <%= ENV['DATABASE_URL'] %>
+  username: abfknpgmgprrfc
+  password: 97e3d52e7e7d5637ecad864bb039b37628d00758800c456ea23abfca47aa6de4
+ 
+ 
+ 
   # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
   # channel_prefix: Project_production
