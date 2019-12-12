@@ -3,7 +3,7 @@ class UserSerializer < ActiveModel::Serializer
 
   has_many :contacts
 end
-class ContactSerializer < ActiveModel::Serializers
+class ContactSerializer < ActiveModel::Serializer
   attributes :kind, :value
 
   belongs_to :user
