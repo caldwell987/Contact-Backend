@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
       root to: "user#index"
       
-      resources :users
+      resources :users, only: [:index]
+      get 'user_id/:id', to: "users#find_by_id"
 
       resources :sessions, only: [:create]
       delete :logout, to: "sessions#logout"

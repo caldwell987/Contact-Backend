@@ -6,5 +6,11 @@ class Api::V1::UsersController < ApplicationController
     # render json: @users, status: 200
     render json: @users
   end
+
+  def find_by_id 
+    @user = User.find(params[:id])
+  end
+
+  
 end
 
