@@ -23,7 +23,7 @@ class Api::V1::SessionsController < ApplicationController
     if @current_user
       render json: {
         logged_in: true,
-        user: @current_user
+        user: @current_user, include: :contacts, status: 200
       }
     else 
       render json: {
