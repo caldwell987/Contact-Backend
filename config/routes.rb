@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       
       resources :users, only: [:index]
       get 'user_id/:id', to: "users#find_by_id"
+      get '/users/currentuser', to: 'users#render_current_user'
+      # get 'users/user_username/:username', to: "users#find_by_username"
 
       resources :sessions, only: [:create]
       delete :logout, to: "sessions#logout"
