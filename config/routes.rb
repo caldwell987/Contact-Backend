@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get 'myconnection/:id', to: "findusers#find_by_id"
+
+  
   namespace :api do
     namespace :v1 do 
 
